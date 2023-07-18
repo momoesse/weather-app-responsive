@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+  <header class="navBar">
+    <div class="hamburgerMenu">
+      <input type="checkbox" id="checkboxToggle" />
+      <label for="checkboxToggle" class="hamburger">&#9776;</label>
+    </div>
+    <div class="searchBar">
+      <input id="idSearchInput" class="searchInput" type="text" placeholder="Search for a city">
+      <button id="idSearchButton" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    <div class="buttonArea">
+      <div>
+        <ul>
+          <li><button class="geolocateButton">
+              <i class="fa fa-location-arrow"></i>
+              <span class="tooltipText">Your location</span>
+            </button>
+          </li>
+          <li>
+            <button class="celsiusButton">°C
+              <span class="tooltipText">Celsius</span>
+            </button>
+          </li>
+          <li>
+            <button class="fahrenheitButton">°F
+              <span class="tooltipText">Fahrenheit</span>
+            </button>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" id="toggleSwitch" />
+              <span class="check"></span>
+            </label>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+  <main class="cards">
+    <div>
+      <h3 class="today"></h3>
+    </div>
+    <div class="firstRowCards">
+      <div class="mainCard">
+        <ul>
+          <li>
+            <p class="city">Rome</p>
+          </li>
+          <li>
+            <p class="temperature">26°</p>
+          </li>
+        </ul>
+        <div class="flex_2">
+          <img class="icon"></img>
+          <h3 class="description"></h3>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="secondRowCards">
+      <div class="cardList">
+        <div class="firstList">
+          <ul>
+            <li>Feels like</li>
+            <li>
+              <i class="material-icons">thermostat</i>
+            </li>
+            <li class="feltTemperature"></li>
+          </ul>
+        </div>
+        <div class="secondList">
+          <ul>
+            <li>Humidity</li>
+            <li>
+              <i class="material-icons">water_drop</i>
+            </li>
+            <li class="humidity"></li>
+          </ul>
+        </div>
+        <div class="firstList">
+          <ul>
+            <li>Wind speed</li>
+            <li>
+              <i class="material-icons">air</i>
+            </li>
+            <li class="windSpeed"></li>
+          </ul>
+        </div>
+        <div class="secondList">
+          <ul>
+            <li>Min</li>
+            <li>
+              <i class="material-icons">thermostat</i>
+            </li>
+            <li class="minTemperature"></li>
+          </ul>
+        </div>
+        <div class="firstList">
+          <ul>
+            <li>Max</li>
+            <li>
+              <i class="material-icons">thermostat</i>
+            </li>
+            <li class="maxTemperature"></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+</body>
+
+</html>
