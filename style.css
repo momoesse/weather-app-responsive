@@ -1,13 +1,10 @@
 body {
   background-image: url("./backgroundImg.png");
+  margin: 0%;
 }
 
 ul {
   list-style-type: none;
-}
-
-.buttonArea li {
-  display: inline;
 }
 
 .navBar {
@@ -22,8 +19,22 @@ ul {
   font-family: inherit;
 }
 
-.searchBar {
+.navBar button {
+  border: none;
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  background-color: #423bd8;
+  color: #cfcde9;
+  margin-right: 1.5em;
+}
+
+.searchBar, .searchBar button {
   margin-left: 1em;
+}
+
+.buttonArea li {
+  display: inline;
 }
 
 .geolocateButton .tooltipText,
@@ -53,12 +64,12 @@ ul {
     visibility: visible;
 }
 
-.buttonArea {
-  margin-right: 1em;
-}
-
 .navBar button:hover {
   transform: scale(1.1);
+}
+
+.buttonArea {
+  margin-right: 1em;
 }
 
 .hamburgerMenu {
@@ -71,9 +82,39 @@ ul {
   align-items: center;
 }
 
+.mainCard {
+  background-color: white;
+  z-index: 1;
+  width: 25em;
+  height: 15em;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 3em;
+  margin: 3em;
+  border-radius: 25px;
+  color: #423bd8;
+  border: none;
+  border-color: #ccc;
+}
+
 .cardList {
   display: flex;
   flex-direction: row;
+  background-color: white;
+  border-radius: 25px;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+.firstList {
+  color: #423bd8;
+  width: 10em;
+}
+
+.secondList {
+  background-color: #423bd8;
+  color: white;
+  border-radius: 25px;
+  width: 10em;
 }
 
 @media (max-width: 768px) {
@@ -81,8 +122,8 @@ ul {
     flex-direction: column;
   }
 
-  .buttonArea li, .hamburgerMenu {
-    display:block;
+  .searchBar {
+    margin-top: 5em;
   }
 
   .buttonArea {
@@ -93,12 +134,8 @@ ul {
     margin: 0.5em;
   }
 
-  .searchBar {
-    margin-top: 5em;
-  }
-
-  .cards {
-    margin-top: 10em;
+  .buttonArea li, .hamburgerMenu {
+    display:block;
   }
 
   .hamburger {
@@ -107,5 +144,9 @@ ul {
 
   .hamburgerMenu input {
     display: none;
+  }
+
+  .cards {
+    margin-top: 10em;
   }
 }

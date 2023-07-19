@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,23 +12,23 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" type="text/javascript" defer></script>
 </head>
-
 <body>
   <header class="navBar">
     <div class="hamburgerMenu">
-      <input type="checkbox" id="checkboxToggle" />
-      <label for="checkboxToggle" class="hamburger">&#9776;</label>
+      <input type="checkbox" id="checkboxToggle" onclick="setMenuDisplay()" />
+      <label for="checkboxToggle" class="hamburger"><i class="fa fa-bars"></i></label>
     </div>
-    <div class="searchBar">
+    <div class="searchBar displayBar">
       <input id="idSearchInput" class="searchInput" type="text" placeholder="Search for a city">
       <button id="idSearchButton" class="searchButton">
         <i class="fa fa-search"></i>
       </button>
     </div>
-    <div class="buttonArea">
+    <div class="buttonArea displayBar">
       <div>
         <ul>
-          <li><button class="geolocateButton">
+          <li>
+            <button class="geolocateButton">
               <i class="fa fa-location-arrow"></i>
               <span class="tooltipText">Your location</span>
             </button>
@@ -51,87 +50,72 @@
             </label>
           </li>
         </ul>
-
       </div>
     </div>
   </header>
   <main class="cards">
-    <div>
+    <div class="mainCard">
       <h3 class="today"></h3>
+      <ul>
+        <li>
+          <p class="city">Rome</p>
+        </li>
+        <li>
+          <p class="temperature">26°</p>
+        </li>
+      </ul>
+      <div class="flex_2">
+        <img class="icon"></img>
+        <h3 class="description"></h3>
+      </div>
     </div>
-    <div class="firstRowCards">
-      <div class="mainCard">
+    <div class="cardList">
+      <div class="firstList">
         <ul>
+          <li>Feels like</li>
           <li>
-            <p class="city">Rome</p>
+            <i class="material-icons">thermostat</i>
           </li>
-          <li>
-            <p class="temperature">26°</p>
-          </li>
+          <li class="feltTemperature"></li>
         </ul>
-        <div class="flex_2">
-          <img class="icon"></img>
-          <h3 class="description"></h3>
-        </div>
       </div>
-
-
-    </div>
-    <div class="secondRowCards">
-      <div class="cardList">
-        <div class="firstList">
-          <ul>
-            <li>Feels like</li>
-            <li>
-              <i class="material-icons">thermostat</i>
-            </li>
-            <li class="feltTemperature"></li>
-          </ul>
-        </div>
-        <div class="secondList">
-          <ul>
-            <li>Humidity</li>
-            <li>
-              <i class="material-icons">water_drop</i>
-            </li>
-            <li class="humidity"></li>
-          </ul>
-        </div>
-        <div class="firstList">
-          <ul>
-            <li>Wind speed</li>
-            <li>
-              <i class="material-icons">air</i>
-            </li>
-            <li class="windSpeed"></li>
-          </ul>
-        </div>
-        <div class="secondList">
-          <ul>
-            <li>Min</li>
-            <li>
-              <i class="material-icons">thermostat</i>
-            </li>
-            <li class="minTemperature"></li>
-          </ul>
-        </div>
-        <div class="firstList">
-          <ul>
-            <li>Max</li>
-            <li>
-              <i class="material-icons">thermostat</i>
-            </li>
-            <li class="maxTemperature"></li>
-          </ul>
-        </div>
-
+      <div class="secondList">
+        <ul>
+          <li>Humidity</li>
+          <li>
+            <i class="material-icons">water_drop</i>
+          </li>
+          <li class="humidity"></li>
+        </ul>
+      </div>
+      <div class="firstList">
+        <ul>
+          <li>Wind speed</li>
+          <li>
+            <i class="material-icons">air</i>
+          </li>
+          <li class="windSpeed"></li>
+        </ul>
+      </div>
+      <div class="secondList">
+        <ul>
+          <li>Min</li>
+          <li>
+            <i class="material-icons">thermostat</i>
+          </li>
+          <li class="minTemperature"></li>
+        </ul>
+      </div>
+      <div class="firstList">
+        <ul>
+          <li>Max</li>
+          <li>
+            <i class="material-icons">thermostat</i>
+          </li>
+          <li class="maxTemperature"></li>
+        </ul>
       </div>
     </div>
-
-
-
   </main>
-
 </body>
-
 </html>
