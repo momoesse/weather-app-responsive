@@ -8,7 +8,7 @@ function setMenuDisplay() {
         if (oCheckboxToggle.checked === true) {
             aButtonArea[i].style.display = "none";
         } else {
-            aButtonArea[i].style.display = "block";
+            aButtonArea[i].style.display = "flex";
         }
     }
 }
@@ -123,6 +123,11 @@ function displayWeather(data) {
         isCelsius: true,
         isFahrenheit: false
     }
+
+    document.getElementById("idBtnC").disabled = true;
+    document.getElementById("idBtnC").style.opacity = 0.3;
+    document.getElementById("idBtnF").disabled = false;
+    document.getElementById("idBtnF").style.opacity = 1;
 }
 
 document.getElementById("idSearchInput").addEventListener("keyup", function (oEvent) {
@@ -193,9 +198,17 @@ function convertTemp(sParam) {
     }
 
     if (sParam == "C") {
+        document.getElementById("idBtnC").disabled = true;
+        document.getElementById("idBtnC").style.opacity = 0.3;
+        document.getElementById("idBtnF").disabled = false;
+        document.getElementById("idBtnF").style.opacity = 1;
         this.oState.isCelsius = true;
         this.oState.isFahrenheit = false;
     } else {
+        document.getElementById("idBtnC").disabled = false;
+        document.getElementById("idBtnF").disabled = true;
+        document.getElementById("idBtnF").style.opacity = 0.3;
+        document.getElementById("idBtnC").style.opacity = 1;
         this.oState.isCelsius = false;
         this.oState.isFahrenheit = true;
     }

@@ -22,6 +22,7 @@
       <input id="idSearchInput" class="searchInput" type="text" placeholder="Search for a city">
       <button id="idSearchButton" class="searchButton">
         <i class="fa fa-search"></i>
+        <span class="tooltipText">Search</span>
       </button>
     </div>
     <div class="buttonArea displayBar">
@@ -34,12 +35,12 @@
             </button>
           </li>
           <li>
-            <button class="celsiusButton">°C
+            <button id="idBtnC" class="celsiusButton">°C
               <span class="tooltipText">Celsius</span>
             </button>
           </li>
           <li>
-            <button class="fahrenheitButton">°F
+            <button id="idBtnF" class="fahrenheitButton">°F
               <span class="tooltipText">Fahrenheit</span>
             </button>
           </li>
@@ -55,19 +56,15 @@
   </header>
   <main class="cards">
     <div class="mainCard">
-      <h3 class="today"></h3>
+      <p class="today"></p>
       <ul>
+        <li class="city"></li>
+        <li class="temperature"></li>
         <li>
-          <p class="city">Rome</p>
+          <img class="icon"></img>
         </li>
-        <li>
-          <p class="temperature">26°</p>
-        </li>
+        <li class="description"></li>
       </ul>
-      <div class="flex_2">
-        <img class="icon"></img>
-        <h3 class="description"></h3>
-      </div>
     </div>
     <div class="cardList">
       <div class="firstList">
@@ -117,5 +114,8 @@
       </div>
     </div>
   </main>
+  <footer>
+    <p>Designed and developed by Monica</p>
+  </footer>
 </body>
 </html>

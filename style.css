@@ -1,4 +1,6 @@
 body {
+  font-family: 'Poppins';
+  font-weight: bold;
   background-image: url("./backgroundImg.png");
   margin: 0%;
 }
@@ -33,10 +35,30 @@ ul {
   margin-left: 1em;
 }
 
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  width: 22em;
+}
+
+.searchBar button {
+  margin-right: 0em;
+}
+
+.searchInput {
+  margin-left: 1em;
+  width: 22em;
+  border: none;
+}
+
 .buttonArea li {
   display: inline;
 }
 
+.searchButton .tooltipText,
 .geolocateButton .tooltipText,
 .celsiusButton .tooltipText,
 .fahrenheitButton .tooltipText {
@@ -58,6 +80,7 @@ ul {
     margin-top: 0.5em;
 }
 
+.searchButton:hover .tooltipText,
 .geolocateButton:hover .tooltipText,
 .celsiusButton:hover .tooltipText,
 .fahrenheitButton:hover .tooltipText {
@@ -96,12 +119,19 @@ ul {
   border-color: #ccc;
 }
 
+.mainCard ul {
+  padding-inline-start: 0em;
+}
+
+.mainCard li, p{
+  text-align: center;
+}
+
 .cardList {
   display: flex;
   flex-direction: row;
   background-color: white;
   border-radius: 25px;
-  font-weight: bold;
   line-height: 2em;
 }
 
@@ -115,6 +145,14 @@ ul {
   color: white;
   border-radius: 25px;
   width: 10em;
+}
+
+footer {
+  background-color: #423bd880;
+  position:fixed;
+  bottom: 0;
+  height: 5em;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -147,6 +185,10 @@ ul {
   }
 
   .cards {
-    margin-top: 10em;
+    margin-top: 13em;
+  }
+
+  footer {
+    position:static;
   }
 }
